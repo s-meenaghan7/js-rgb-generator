@@ -8,7 +8,7 @@ body {
 #container {
     display: flex;
     flex-direction: column;
-    margin: 100px;
+    margin: 75px;
     justify-content: center;
     align-items: center;
 }
@@ -31,10 +31,4 @@ body {
     flex-direction: row;
     margin: 50px 0;
     justify-content: space-around;
-    /* TODO: fix the slider values so that adjusting the value does not cause the other values to move around on the screen.
-    Probably need to put the values in a div with their respective slider with flex-direction: column. Then, they will be independent from each other.*/
 }
-
-
-
-

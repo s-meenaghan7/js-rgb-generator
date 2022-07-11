@@ -12,12 +12,13 @@
     <div id="container">
         <div id="color-box"></div>
         <h1 id="hex-value"></h1>
+        <!-- <button onclick="setSliderValues();">Generate Random RGB!</button> -->
     </div>
 
     <div id="sliders">
-        <input type="range" min="0" max="255" value="100" id="red-slider">
-        <input type="range" min="0" max="255" value="100" id="green-slider">
-        <input type="range" min="0" max="255" value="100" id="blue-slider">
+        <input type="range" min="0" max="255" id="red-slider">
+        <input type="range" min="0" max="255" id="green-slider">
+        <input type="range" min="0" max="255" id="blue-slider">
 
         <div id="slider-values">
             <h2 id="red-value"></h2>
@@ -25,12 +26,6 @@
             <h2 id="blue-value"></h2>
         </div>
     </div>
-
-    <!-- <div id="slider-values">
-        <h2>1</h2>
-        <h2>2</h2>
-        <h2>3</h2>
-    </div> -->
 
     <script type="text/javascript" src="/app.js"></script>
 </body>

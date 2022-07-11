@@ -4,6 +4,8 @@ const redSlider = document.querySelector('#red-slider');
 const greenSlider = document.querySelector('#green-slider');
 const blueSlider = document.querySelector('#blue-slider');
 
+setSliderValues();
+
 const redValue = document.querySelector('#red-value');
 const greenValue = document.querySelector('#green-value');
 const blueValue = document.querySelector('#blue-value');
@@ -53,4 +55,12 @@ function convertToHex(num) {
     return hexVal;
 }
 
-// todo: REFACTOR :)
+function setSliderValues() {
+    redSlider.value = randomValue();
+    greenSlider.value = randomValue();
+    blueSlider.value = randomValue();
+}
+
+function randomValue() {
+    return Math.round(Math.random() * 255);
+}
