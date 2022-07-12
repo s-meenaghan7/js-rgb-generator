@@ -10,35 +10,34 @@ const redValue = document.querySelector('#red-value');
 const greenValue = document.querySelector('#green-value');
 const blueValue = document.querySelector('#blue-value');
 
-redValue.innerHTML = redSlider.value;
-greenValue.innerHTML = greenSlider.value;
-blueValue.innerHTML = blueSlider.value;
+setLabelValues();
 
 let redHex = convertToHex(redSlider.value);
 let greenHex = convertToHex(greenSlider.value);
 let blueHex = convertToHex(blueSlider.value);
 
 const hexValue = document.querySelector('#hex-value');
-hexValue.innerHTML = buildRGBHexVal(redHex, greenHex, blueHex);
-colorBox.style.backgroundColor = hexValue.innerHTML;
+changeColor();
 
 redSlider.oninput = () => {
     redValue.innerHTML = redSlider.value;
     redHex = convertToHex(redSlider.value);
-    hexValue.innerHTML = buildRGBHexVal(redHex, greenHex, blueHex);
-    colorBox.style.backgroundColor = hexValue.innerHTML;
+    changeColor();
 }
 
 greenSlider.oninput = () => {
     greenValue.innerHTML = greenSlider.value;
     greenHex = convertToHex(greenSlider.value);
-    hexValue.innerHTML = buildRGBHexVal(redHex, greenHex, blueHex);
-    colorBox.style.backgroundColor = hexValue.innerHTML;
+    changeColor();
 }
 
 blueSlider.oninput = () => {
     blueValue.innerHTML = blueSlider.value;
     blueHex = convertToHex(blueSlider.value);
+    changeColor();
+}
+
+function changeColor() {
     hexValue.innerHTML = buildRGBHexVal(redHex, greenHex, blueHex);
     colorBox.style.backgroundColor = hexValue.innerHTML;
 }
@@ -59,6 +58,21 @@ function setSliderValues() {
     redSlider.value = randomValue();
     greenSlider.value = randomValue();
     blueSlider.value = randomValue();
+}
+
+function setLabelValues() {
+    redValue.innerHTML = redSlider.value;
+    greenValue.innerHTML = greenSlider.value;
+    blueValue.innerHTML = blueSlider.value;
+}
+
+function randomButtonHandler() {
+    setSliderValues();
+    setLabelValues();
+    redHex = convertToHex(redSlider.value);
+    greenHex = convertToHex(greenSlider.value);
+    blueHex = convertToHex(blueSlider.value);
+    changeColor();
 }
 
 function randomValue() {
