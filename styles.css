@@ -5,6 +5,25 @@ body {
     align-items: center;
 }
 
+button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #2707f7;
+    color: #ffffff;
+    background-color: #2707f7;
+    transition: background-color .35s linear;
+}
+
+button:hover {
+    color: #2707f7;
+    background-color: #ffffff;
+}
+
+/*-------------------RGB CONTAINER-------------------*/
 #container {
     display: flex;
     flex-direction: column;
@@ -22,13 +41,14 @@ body {
     align-items: center;
 }
 
-#sliders > input {
-    transform: rotate(-90deg);
+/*-------------------CONTROLS-------------------*/
+#slider-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px;
+    justify-items: center;
 }
 
-#slider-values {
-    display: flex;
-    flex-direction: row;
-    margin: 50px 0;
-    justify-content: space-around;
+#slider-container > input {
+    transform: rotate(-90deg);
 }
