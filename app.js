@@ -4,7 +4,7 @@ const redSlider = document.querySelector('#red-slider');
 const greenSlider = document.querySelector('#green-slider');
 const blueSlider = document.querySelector('#blue-slider');
 
-setSliderValues();
+setRandomSliderValues();
 
 const redValue = document.querySelector('#red-value');
 const greenValue = document.querySelector('#green-value');
@@ -54,7 +54,7 @@ function convertToHex(num) {
     return hexVal;
 }
 
-function setSliderValues() {
+function setRandomSliderValues() {
     redSlider.value = randomValue();
     greenSlider.value = randomValue();
     blueSlider.value = randomValue();
@@ -67,7 +67,7 @@ function setLabelValues() {
 }
 
 function randomButtonHandler() {
-    setSliderValues();
+    setRandomSliderValues();
     setLabelValues();
     redHex = convertToHex(redSlider.value);
     greenHex = convertToHex(greenSlider.value);
